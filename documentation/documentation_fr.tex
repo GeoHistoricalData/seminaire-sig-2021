@@ -1,0 +1,70 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+    paper=A4,
+    fontsize=12pt, % Taille de police
+    parskip=half-, % Les paragraphes sont séparés par une demi-ligne
+    twoside=true
+]{scrreprt} % KOMA script (rapport technique)
+
+
+%-----------------------------------------------
+% Fontes et typographie
+\usepackage{kpfonts}    % Une fonte claire et esthétique
+\usepackage[T1]{fontenc}    % pour les règles de typographies adaptées au français (si babel et activé)
+%\usepackage{lmodern} % Fonte par défaut: latin modern
+\usepackage{microtype} % Petites améliorations typographiques
+%\renewcommand{\familydefault}{\sfdefault} % Pour utiliser une fonte sans serif
+
+\addtokomafont{disposition}{\rmfamily} % Pour que les titres utilisent une fonte avec empattement (serif)
+%-----------------------------------------------
+
+%-----------------------------------------------
+%   Français
+\usepackage[french]{babel}
+%-----------------------------------------------
+
+%------------------------------------------------
+% Paquets utiles
+\usepackage{graphicx} % Pour inclure des images
+\usepackage{tikz} % Pour créer des boites (ex. colorées)
+\usepackage{booktabs} % Règles horizontales dans les tableaux
+\usepackage{lastpage} % Pour afficher le nombre totale de page sur chaque page
+%------------------------------------------------
+
+%------------------------------------------------
+% Autres configurations
+
+\renewcommand{\thechapter}{\Alph{chapter}}  % Chapitres indexée par lettres plutôt que numéros
+\renewcommand*{\thesection}{\arabic{section}} % -- Sections sans la lettre de la section parente
+% \AtBeginDocument{\renewcaptionname{english}{\contentsname}{\Large Outline}} % Change the name of the table of contents
+% \usepackage{scrpage2} % Required for customization of the header and footer
+% \pagestyle{scrheadings} % Activates the pagestyle from scrpage2 for custom headers and footers
+% \clearscrheadfoot % Remove the default header and footer
+%\setkomafont{pageheadfoot}{\normalfont\color{black}\sffamily} % Font settings for the header and footer
+%------------------------------------------------
+
+%------------------------------------------------
+%   TITRE
+\title{Variables}
+\author{}
+%------------------------------------------------
+
+
+
+\begin{document}
+\maketitle
+\chapter{Premier chapitre}
+\section{Une section pour tester la police d'écriture et la mise en page}
+- Que signifie \og apprivoiser \fg?
+
+- C'est une chose trop oubliée, dit le renard.  Ca signifie "créer des liens...".
+
+- Créer des liens?
+
+- Bien sûr, dit le renard.  Tu n'es encore pour moi qu'un petit garçon tout semblable à cent mille petits garçons.  Et je n'ai pas besoin de toi.  Et tu n'as pas besoin de moi non plus.  Je ne suis pour toi qu'un renard semblable à cent mille renards.  Mais, si tu m'apprivoises, nous aurons besoin l'un de l'autre.  Tu seras pour moi unique au monde.  Je serai pour toi unique au monde.
+
+- Je commence à comprendre, dit le petit prince.  Il y a une fleur...je crois qu'elle m'a apprivoisé...
+\end{document}
